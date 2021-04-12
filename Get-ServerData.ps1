@@ -8,7 +8,7 @@ function Write-File {
     param (
 		$path,
 		$pathTemp
-        $header,
+        	$header,
     )
 	Get-Content -Path $pathTemp    | Select -Skip 1 |	ConvertFrom-Csv -Header ("Servidor"+$delimited+$header)		| Export-Csv -Path $path    -Delimiter $delimited -NoTypeInformation
 	Remove-Item -path $pathTemp
