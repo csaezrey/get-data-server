@@ -1,6 +1,6 @@
 #Conexiones para conexiones RPC. Este ejemplo asume mismo usuario y clave.
-$user = "username"
-$password = ConvertTo-SecureString "password" -AsPlainText -Force 
+$user = Read-Host "Ingresar usuario"
+$password = Read-Host "Ingresar clave" -AsSecureString
 $credential = New-Object System.Management.Automation.PSCredential ($user, $password)
 
 #Función para escribir archivos CSV con cabecera
